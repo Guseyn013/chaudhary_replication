@@ -5,6 +5,9 @@ sad_data/
 # Model artifacts (large .pt files)
 results/*/vectors/
 results/*/normalized_vectors/
+results_overall/*/vectors/
+results_overall/*/normalized_vectors/
+*.pt
 
 # Python
 __pycache__/

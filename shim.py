@@ -14,7 +14,6 @@ from contextlib import contextmanager
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
 from typing import Optional, List, Tuple, Union, Dict, Any
 
-
 class HookedTransformerShim:
     """
     Minimal API-compatible shim for the HookedTransformer used in transformer_lens.

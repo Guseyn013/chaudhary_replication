@@ -41,18 +41,27 @@ The methodology is identical to the original:
 | Family | Models | Status |
 |--------|--------|--------|
 | Gemma 3 (anchor) | 270m-it, 1b-it, 4b-it, 12b-it, 27b-it | Anchor for validation against paper |
-| Qwen 3.5 | 0.8B, 2B, 4B, 9B, 27B | New family |
-| Gemma 4 | E2B-it, E4B-it, 31B-it | New family |
+| Qwen 3.5 | 0.8B, 2B, 4B, 27B | New family |
+| Gemma 4 | E2B-it | New family |
 
 ## Results
 
-<!-- Update this section after downloading results from GPU -->
+![Scaling Law Replication](scaling_law_replication.png)
 
-```
-model,size,AUROC,Layers,best_layer,dataset
-```
+![Scaling Law Replication — Lines](scaling_law_replication_lines.png)
 
-Results are appended to `results/results.csv` as each model completes.
+| Model | Params (B) | \|AUROC - 0.5\| | Best Layer |
+|-------|-----------|---------------|------------|
+| gemma-3-270m-it | 0.27 | 0.1611 | 6 |
+| Qwen3.5-0.8B | 0.87 | 0.2392 | 17 |
+| gemma-3-1b-it | 1.0 | 0.1923 | 1 |
+| Qwen3.5-2B | 2.27 | 0.2551 | 2 |
+| Qwen3.5-4B | 4.66 | 0.2689 | 11 |
+| gemma-4-E2B-it | 5.12 | 0.3804 | 7 |
+| gemma-3-4b-it | 6.0 | 0.0921 | 4 |
+| gemma-3-12b-it | 13.0 | 0.3004 | 16 |
+| gemma-3-27b-it | 27.0 | 0.2201 | 6 |
+| Qwen3.5-27B | 27.78 | 0.3153 | 28 |
 
 ## How to Run
 
